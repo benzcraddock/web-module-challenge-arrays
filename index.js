@@ -45,13 +45,11 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 // 1 parameter called array using spread operator
-function copy(/*your code here*/){
-
+const copyFlavors = [...originalFlavors];
+function copy(array){
 //return a copy of the array
-
+  return copyFlavors;
 }    
-
-
 
 
 
@@ -66,9 +64,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 // 1 parameter called array 
-function is31Flavors(/*your code here*/){
-
+function is31Flavors(array){
  // conditional here if the array.length is 31 flavors return true, else return false ** exact match!
+ if(array.length = 31){
+   return true;
+ } else{
+   return true;
+ }
+ return is31Flavors;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -140,7 +143,6 @@ Use the removeFlavorByName function below to do the following:
 */
 // 2 parameters - array, string also added additional situation with 'chocolate' array item that needs to be uppercase
 function removeFlavorByName(array, string){
-  let filteredArray = [];
 
   // const str = string; // dont need anymore
   // const str2 = string.charAt(0).toUpperCase() + string.slice(1);
@@ -150,10 +152,11 @@ function removeFlavorByName(array, string){
   for(let i = 0; i < array.length; i++){
     // looking for exact match
     if(array[i].includes(string)){
-      filteredArray.pop(array[i]);
+      // if the item is included at that index, we want to remove it
+      array.splice(i, 1); // remove index and the one item at that index
     }
   }
-  return filteredArray;
+  return array;
 // return the array
 }
 
@@ -194,7 +197,7 @@ function filterByWord(array, string){
   return filteredFlavors;
 }
 
-console.log(filterByWord(originalFlavors, "Chocolate"));
+console.log(filterByWord(originalFlavors, 'Chocolate'));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
