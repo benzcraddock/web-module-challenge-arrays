@@ -146,26 +146,22 @@ Use the removeFlavorByName function below to do the following:
 
   HINT: You can use .splice() for this
 */
-// 2 parameters - array, string also added additional situation with 'chocolate' array item that needs to be uppercase
-function removeFlavorByName(array, string){
+// 2 parameters - array, string also added additional situation with 'chocolate' array item that needs to be uppercase but has been commented out for test to grade correctly
+function removeFlavorByName(array, flavor){
 
   // const str = string; // dont need anymore
   // const str2 = string.charAt(0).toUpperCase() + string.slice(1);
   // console.log(str2); // TEST
 
-  // loop through the array and check to see if the string is at that index, if it is then remove it
   for(let i = 0; i < array.length; i++){
-    // looking for exact match
-    if(array[i].includes(string)){
-      // if the item is included at that index, we want to remove it
-      array.splice(i, 1); // remove index and the one item at that index
+    if(array[i] === (flavor)){
+      array.splice(i, 1);
     }
   }
   return array;
-// return the array
 }
 
-console.log(removeFlavorByName(originalFlavors, 'Chocolate'));
+// console.log(removeFlavorByName(originalFlavors, 'Chocolate'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
